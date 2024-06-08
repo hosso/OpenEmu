@@ -1,6 +1,6 @@
 [submodule "OpenEmu-SDK"]
 	path = OpenEmu-SDK
-	url = ../../OpenEmu/OpenEmu-SDK.git
+	url = ../../hosso/OpenEmu-SDK-extended.git
 [submodule "CrabEmu"]
 	path = CrabEmu
 	url = ../../OpenEmu/CrabEmu-Core.git
@@ -88,3 +88,6 @@
 [submodule "DeSmuME"]
 	path = DeSmuME
 	url = ../../OpenEmu/DeSmuME-Core.git
+[submodule "UME"]
+	path = UME
+	url = ../../hosso/UME-Core-extended.git
