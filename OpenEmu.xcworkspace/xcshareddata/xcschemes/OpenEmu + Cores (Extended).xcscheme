@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1200"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# Reset Sparkle Appcast URLs&#10;/usr/libexec/PlistBuddy -c &quot;Set :OECoreListURL https://raw.github.com/OpenEmu/OpenEmu-Update/master/oecores.xml&quot; ${SOURCE_ROOT}/${INFOPLIST_FILE}&#10;&#10;/usr/libexec/PlistBuddy -c &quot;Set :SUFeedURL https://raw.github.com/OpenEmu/OpenEmu-Update/master/appcast.xml&quot; ${SOURCE_ROOT}/${INFOPLIST_FILE}">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "8D15AC270486D014006FF6A4"
+                     BuildableName = "OpenEmu.app"
+                     BlueprintName = "OpenEmu"
+                     ReferencedContainer = "container:OpenEmu/OpenEmu.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C6772A251710A4BA00ED580A"
+               BuildableName = "OpenEmuBase.framework"
+               BlueprintName = "OpenEmuBase"
+               ReferencedContainer = "container:OpenEmu-SDK/OpenEmu-SDK.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C6772A8B1710CD7E00ED580A"
+               BuildableName = "OpenEmuSystem.framework"
+               BlueprintName = "OpenEmuSystem"
+               ReferencedContainer = "container:OpenEmu-SDK/OpenEmu-SDK.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8D15AC270486D014006FF6A4"
+               BuildableName = "OpenEmu.app"
+               BlueprintName = "OpenEmu"
+               ReferencedContainer = "container:OpenEmu/OpenEmu.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "01607FC525388361006FCBC8"
+               BuildableName = "Build &amp; Copy Experimental SystemPlugins"
+               BlueprintName = "Build &amp; Copy Experimental SystemPlugins"
+               ReferencedContainer = "container:OpenEmu/OpenEmu.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D0AADE271763813100759E26"
+               BuildableName = "Build &amp; Install MAME"
+               BlueprintName = "Build &amp; Install MAME"
+               ReferencedContainer = "container:UME/MAME.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# Reset Sparkle Appcast URLs&#10;/usr/libexec/PlistBuddy -c &quot;Set :OECoreListURL https://raw.github.com/OpenEmu/OpenEmu-Update/master/oecores.xml&quot; ${SOURCE_ROOT}/${INFOPLIST_FILE}&#10;&#10;/usr/libexec/PlistBuddy -c &quot;Set :SUFeedURL https://raw.github.com/OpenEmu/OpenEmu-Update/master/appcast.xml&quot; ${SOURCE_ROOT}/${INFOPLIST_FILE}">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "8D15AC270486D014006FF6A4"
+                     BuildableName = "OpenEmu.app"
+                     BlueprintName = "OpenEmu"
+                     ReferencedContainer = "container:OpenEmu/OpenEmu.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8D15AC270486D014006FF6A4"
+            BuildableName = "OpenEmu.app"
+            BlueprintName = "OpenEmu"
+            ReferencedContainer = "container:OpenEmu/OpenEmu.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "05DB72A02532681B0098459D"
+               BuildableName = "OpenEmuTests.xctest"
+               BlueprintName = "OpenEmuTests"
+               ReferencedContainer = "container:OpenEmu/OpenEmu.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# Reset Sparkle Appcast URLs&#10;/usr/libexec/PlistBuddy -c &quot;Set :OECoreListURL https://raw.github.com/OpenEmu/OpenEmu-Update/master/oecores.xml&quot; ${SOURCE_ROOT}/${INFOPLIST_FILE}&#10;&#10;/usr/libexec/PlistBuddy -c &quot;Set :SUFeedURL https://raw.github.com/OpenEmu/OpenEmu-Update/master/appcast.xml&quot; ${SOURCE_ROOT}/${INFOPLIST_FILE}">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "8D15AC270486D014006FF6A4"
+                     BuildableName = "OpenEmu.app"
+                     BlueprintName = "OpenEmu"
+                     ReferencedContainer = "container:OpenEmu/OpenEmu.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8D15AC270486D014006FF6A4"
+            BuildableName = "OpenEmu.app"
+            BlueprintName = "OpenEmu"
+            ReferencedContainer = "container:OpenEmu/OpenEmu.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# Reset Sparkle Appcast URLs&#10;/usr/libexec/PlistBuddy -c &quot;Set :OECoreListURL https://raw.github.com/OpenEmu/OpenEmu-Update/master/oecores.xml&quot; ${SOURCE_ROOT}/${INFOPLIST_FILE}&#10;&#10;/usr/libexec/PlistBuddy -c &quot;Set :SUFeedURL https://raw.github.com/OpenEmu/OpenEmu-Update/master/appcast.xml&quot; ${SOURCE_ROOT}/${INFOPLIST_FILE}">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "8D15AC270486D014006FF6A4"
+                     BuildableName = "OpenEmu.app"
+                     BlueprintName = "OpenEmu"
+                     ReferencedContainer = "container:OpenEmu/OpenEmu.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8D15AC270486D014006FF6A4"
+            BuildableName = "OpenEmu.app"
+            BlueprintName = "OpenEmu"
+            ReferencedContainer = "container:OpenEmu/OpenEmu.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Release">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# Reset Sparkle Appcast URLs&#10;/usr/libexec/PlistBuddy -c &quot;Set :OECoreListURL https://raw.github.com/OpenEmu/OpenEmu-Update/master/oecores.xml&quot; ${SOURCE_ROOT}/${INFOPLIST_FILE}&#10;&#10;/usr/libexec/PlistBuddy -c &quot;Set :SUFeedURL https://raw.github.com/OpenEmu/OpenEmu-Update/master/appcast.xml&quot; ${SOURCE_ROOT}/${INFOPLIST_FILE}">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "8D15AC270486D014006FF6A4"
+                     BuildableName = "OpenEmu.app"
+                     BlueprintName = "OpenEmu"
+                     ReferencedContainer = "container:OpenEmu/OpenEmu.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
+   </ArchiveAction>
+</Scheme>
