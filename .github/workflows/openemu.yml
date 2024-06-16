@@ -1,9 +1,6 @@
 name: OpenEmu.app
 
 on:
-  pull_request:
-    branches:
-      - master
   workflow_dispatch:
 
 jobs:
@@ -20,33 +17,21 @@ jobs:
         uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: ^15.1
-      - name: Build OpenEmu
-        working-directory: ${{github.workspace}}
-        run: xcodebuild -workspace "OpenEmu.xcworkspace" -scheme "OpenEmu" -configuration Release -sdk macosx -arch x86_64 -derivedDataPath DerivedData
+      - name: Download the prebuilt dylib to build MAME Core
+        run: ./mamearcade_headless.sh download
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Build OpenEmu + Cores (Extended)
+        run: xcodebuild -workspace "OpenEmu.xcworkspace" -scheme "OpenEmu + Cores (Extended)" -configuration Release -sdk macosx -arch x86_64 -derivedDataPath DerivedData
       - name: Remove code signature
-        working-directory: ${{github.workspace}}/DerivedData/Build/Products/Release/
-        run: codesign --remove-signature OpenEmu.app
-      - name: Zip OpenEmu
-        working-directory: ${{github.workspace}}/DerivedData/Build/Products/Release/
-        run: zip -y -r OpenEmu.zip OpenEmu.app
-      - name: Build OpenEmu Experimental
-        working-directory: ${{github.workspace}}
-        run: xcodebuild -workspace "OpenEmu.xcworkspace" -scheme "OpenEmu (Experimental)" -configuration Release -sdk macosx -arch x86_64 -derivedDataPath DerivedData
-      - name: Remove code signature
-        working-directory: ${{github.workspace}}/DerivedData/Build/Products/Release/
-        run: codesign --remove-signature OpenEmu.app
-      - name: Zip OpenEmu Experimental
-        working-directory: ${{github.workspace}}/DerivedData/Build/Products/Release/
-        run: zip -y -r OpenEmu-experimental.zip OpenEmu.app
-      - name: Upload OpenEmu
+        working-directory: ${{ github.workspace }}/DerivedData/Build/Products/Release/
+        run: codesign --remove-signature *.{app,oecoreplugin}
+      - name: Zip OpenEmu Extended
+        working-directory: ${{ github.workspace }}/DerivedData/Build/Products/Release/
+        run: zip -y -r OpenEmu-extended.zip OpenEmu.app MAME.oecoreplugin 
+      - name: Upload OpenEmu Extended
         if: github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@v4
         with:
-          name: OpenEmu.zip
-          path: ${{github.workspace}}/DerivedData/Build/Products/Release/OpenEmu.zip
-      - name: Upload OpenEmu Experimental
-        if: github.event_name == 'workflow_dispatch'
-        uses: actions/upload-artifact@v4
-        with:
-          name: OpenEmu-experimental.zip
-          path: ${{github.workspace}}/DerivedData/Build/Products/Release/OpenEmu-experimental.zip
+          name: OpenEmu-extended.zip
+          path: ${{ github.workspace }}/DerivedData/Build/Products/Release/OpenEmu-extended.zip
