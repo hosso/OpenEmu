@@ -1,0 +1,24 @@
+name: mamearcade_headless.dylib
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 1 * *'
+
+jobs:
+  build:
+    name: Build mamearcade_headless.dylib for MAME Core
+    runs-on: macos-13
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Build
+        run: ./mamearcade_headless.sh build
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: mamearcade_headless.dylib
+          path: UME/deps/mame/mamearcade_headless.dylib
